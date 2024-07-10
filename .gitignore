@@ -1,2 +1,5 @@
 bin/dog
-build/*.o
+build/main.o
+build/printing.o
+build/errorHandler.o
+build/flagsControll.o
