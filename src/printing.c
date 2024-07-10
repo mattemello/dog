@@ -37,16 +37,21 @@ void printFile(const char *path){
     int i = 0;
     char buffer[MAX_DIM];
 
+    printf("\n");
+
    while(fgets(buffer, MAX_DIM, inputFile) != NULL){
         if(numberRow){
-            printf("%d | %s\n", i, buffer);
+            printf("%d | %s", i, buffer);
         }else if(table){
             // to do
         }else{
-            printf("%s\n", buffer);
+            printf("%s", buffer);
         }
+
+        i++;
     }
 
+    printf("\n");
 
     exit(EXIT_SUCCESS);
 
