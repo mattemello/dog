@@ -14,7 +14,6 @@ int main(int argc, char** argv) {
     if(position != -1){
         printFile(argv[position]);
     }
-    
 
     return 0;
 }

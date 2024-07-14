@@ -1,4 +1,4 @@
-all: bin/dog
+all: createDir bin/dog
 
 clear: 
 	rm -f bin/* build/*
@@ -8,6 +8,10 @@ CFLAG= -g -Wall -Wextra -Wpedantic -Wconversion
 INCLUDES= src/*.h
 
 COMMON_DEPS= $(INCLUDES) Makefile
+
+createDir:
+	mkdir bin
+	mkdir build
 
 build/%.o: src/%.c $(COMMON_DEPS)
 	$(CC) $(CFLAG) -c $< -o $@
